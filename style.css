@@ -1,0 +1,419 @@
+body {
+    margin: 0;
+    font-family: 'Work Sans';
+    font-style: normal;
+}
+
+header {
+    display: inline-flex;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 30px;
+    flex-grow: 1;
+    padding-right: 30px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    box-shadow: 0px 12px 7px -8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.mainIcon {
+    height: 40px;
+}
+
+.NavLogo {
+    display: flex;
+    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: #fa7b29;
+}
+
+.mainContainer {
+    display: flex;
+
+    height: 100vh;
+}
+
+.mainContent {
+    width: 80%;
+}
+
+.basketContainer {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restaurantImage {
+    position: relative;
+}
+
+.restaurantHeaderImg {
+    height: 320px;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logoRestaurant {
+    position: absolute;
+    left: 100px;
+    bottom: -28px;
+    border-radius: 16px;
+}
+
+.restaurantIcon {
+    height: 130px;
+}
+
+.restaurantInfo {
+    padding: 70px;
+    box-shadow: -8px 3px 8px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+}
+
+.RatingContainer {
+    display: flex;
+    height: 40px;
+    object-fit: fill;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 5px;
+
+}
+
+.RatingContainer img {
+    object-fit: cover;
+    width: 120px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+
+}
+
+.deliveryInfo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    object-fit: cover;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.deliveryIcon {
+    height: 20px;
+
+
+}
+
+.quickNavbar {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    height: 20px;
+
+    gap: 25px;
+    justify-content: center;
+}
+
+.NavBarContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nav {
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 70px);
+}
+
+.card {
+    width: 100%;
+}
+
+.foodImage {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: -8px 3px 8px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.menuName {
+    font-size: 38px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.foodcard {
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 7px 4px 13px 13px rgba(87, 75, 75, 0.63);
+    border-radius: 12px;
+    background-color: rgba(169, 163, 163, 0.3);
+    height: 150px;
+    padding: 15px;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.foodcard:hover {
+    cursor: pointer;
+    scale: 1.02;
+    background-color: rgb(226, 226, 226);
+    transition: 50ms scale ease-in-out;
+}
+
+
+.foodName {
+    display: flex;
+    position: relative;
+    font-size: 30px;
+    height: 50px;
+    font-weight: bold;
+
+}
+
+.foodName img {
+    position: absolute !important;
+    right: 5px;
+    top: 0px;
+    height: 30px;
+}
+
+
+.foodDescryption {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.foodPrice {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    font-size: 22px;
+}
+
+.basket {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid;
+    width: 80%;
+
+}
+
+.basketImg {
+    height: 20px;
+}
+
+.BasketTable {
+    font-size: 14px;
+}
+
+.BasketTitle {
+    display: flex;
+    width: 200px;
+    background-color: #fa7b29;
+    justify-content: center;
+    border-radius: 12px;
+    height: 50px;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    width: 200px;
+    background-color: #fa7b29;
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.orderComplete {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 130;
+    height: 100vh;
+    width: 100%;
+    
+    background-color: aliceblue;
+    box-sizing: content-box;
+}
+
+.complete {
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.button2 {
+    display: flex;
+    width: 100px;
+    background-color: #fa7b29;
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.mobileBasket {
+    display: none;
+}
+
+.showMobileBasket {
+    display: none;
+}
+
+.basketAbsolute {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 120;
+    background-color: azure;
+    width: 100%;
+}
+
+
+
+@media(max-width: 1100px) {
+
+    .mainContent {
+        width: 100%;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .basketContainer {
+        display: none;
+        width: 0;
+    }
+
+    .mobileBasket {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 8px;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+        height: 50px;
+    }
+
+    .button2 {
+        width: 250px;
+        height: 30px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cardContent {
+        padding-right: 70px;
+        width: calc(100% - 140px);
+    }
+
+    body {
+        font-size: 12px !important;
+    }
+
+    .foodDescryption {
+        font-size: 12px;
+    }
+
+    .foodName {
+        font-size: 12px;
+    }
+
+    .menuName {
+        font-size: 18px;
+    }
+
+    .complete {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 400px){
+    body {
+        font-size: 10px !important;
+    }
+    .foodDescryption {
+        font-size: 10px;
+    }
+
+    .foodName {
+        font-size: 10px;
+    }
+
+    .menuName {
+        font-size: 14px;
+    }
+
+    .complete {
+        font-size: 12px;
+    }
+
+    .BasketTable {
+        
+        font-size: 8px;
+    }
+
+    .basketImg {
+        height: 10px;
+    }
+
+}

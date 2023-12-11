@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lieferando</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css">
+    <script src="json.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body onload="renderAll()">
+    <header>
+      <div class="NavLogo">
+        <img class="mainIcon" src="img/icons/tasche.png" alt="Lieferando" />
+        <h2>Lieferando</h2>
+      </div>
+      <img class="mainIcon" src="img/icons/menu-offnen.png" alt="burgermenu" />
+    </header>
+
+    <div class="mainContainer">
+      <div class="mainContent">
+        <div class="restaurantImage">
+          <img class="restaurantHeaderImg" src="img/header.jpg" />
+          <div class="logoRestaurant">
+            <img class="restaurantIcon" src="img/icons/kebab.png" alt="" />
+          </div>
+        </div>
+        <div class="restaurantInfo">
+          <h1>Kebab Galileo</h1>
+          <div class="RatingContainer">
+            <img src="img/icons/bewertung.png" alt="bewertung" />
+            <div class="rating">658 Bewertungen</div>
+          </div>
+          <div class="deliveryInfo">
+            <div>
+              <img class="deliveryIcon" src="img/icons/zukunft.png" alt="uhr" />
+              Lieferung in ca. 40 min
+            </div>
+            <div>
+              <img
+                class="deliveryIcon"
+                src="img/icons/lieferwagen.png"
+                alt="wagen"
+              />
+              Lieferung Kosten 3,50€
+            </div>
+            <div>
+              <img
+                class="deliveryIcon"
+                src="img/icons/tasche (1).png"
+                alt="tasche"
+              />
+              Mindestbestellwert 15€
+            </div>
+          </div>
+          <div class="NavBarContainer">
+            <div>
+              <img
+                class="deliveryIcon"
+                src="img/icons/linke-pfeil.png"
+                alt="links"
+              />
+            </div>
+            <div class="quickNavbar">
+              <div><a class="nav" href="#card0">Döner</a></div>
+              <div><a class="nav" href="#card1">Pizza</a></div>
+              <div><a class="nav" href="#card2">Burger</a></div>
+              <div><a class="nav" href="#card3">Salat</a></div>
+              <div><a class="nav" href="#card4">Getränke</a></div>
+            </div>
+            <div>
+              <img
+                class="deliveryIcon"
+                src="img/icons/rechter-pfeil.png"
+                alt="rechts"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="cardContent" class="cardContent"></div>
+      </div>
+      <div id="mobileBasket" class="mobileBasket">
+        <button id="mobileButton" class="button2" onclick="toggleBasketView('remove', 'add')">
+          Warenkorb
+        </button>
+      </div>
+
+      <div id="basketContainer" class="basketContainer">
+        
+        <h2 class="BasketTitle">Warenkorb</h2>
+        <div class="basket">
+          <table id="basket" class="BasketTable"></table>
+        </div>
+        <h2>Gesamtpreis</h2>
+        <p>Lieferkosten: 3,50 €<br /></p>
+        <div id="sum"></div>
+        <button onclick="OrderComplete()" class="button">
+          Bestellung abschließen
+        </button>
+      </div>
+      <div id="orderComplete" class="d-none orderComplete">
+        <p class="complete">Wir bedanken uns für deine Bestellung</p>
+        <button class="button2" onclick="closeOrder()">Schließen</button>
+      </div>
+    </div>
+
+    <footer class="d-none">
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/essen-und-restaurant"
+        title="essen und restaurant Icons"
+        >Essen und restaurant Icons erstellt von Freepik - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/loschen"
+        title="löschen Icons"
+        >Löschen Icons erstellt von Royyan Wijaya - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/minus"
+        title="minus- Icons"
+        >Minus- Icons erstellt von Freepik - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/plus"
+        title="plus Icons"
+        >Plus Icons erstellt von Freepik - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/uhr"
+        title="uhr Icons"
+        >Uhr Icons erstellt von Freepik - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/5-sterne"
+        title="5 sterne Icons"
+        >5 sterne Icons erstellt von Alfredo Hernandez - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/logistisch"
+        title="logistisch Icons"
+        >Logistisch Icons erstellt von doraclub - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/einkaufstasche"
+        title="einkaufstasche Icons"
+        >Einkaufstasche Icons erstellt von Pixel perfect - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/in-den-warenkorb-legen"
+        title="in den warenkorb legen Icons"
+        >In den warenkorb legen Icons erstellt von Freepik - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/nachster"
+        title="nächster Icons"
+        >Nächster Icons erstellt von Roundicons - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/menu-offnen"
+        title="menü öffnen Icons"
+        >Menü öffnen Icons erstellt von Ilham Fitrotul Hayat - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/plus-minus"
+        title="plus minus Icons"
+        >Plus minus Icons erstellt von Fajar Annaba - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/de/kostenlose-icons/essen-und-restaurant"
+        title="essen und restaurant Icons"
+        >Essen und restaurant Icons erstellt von logisstudio - Flaticon</a
+      >
+    </footer>
+  </body>
+</html>
